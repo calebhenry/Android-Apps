@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">30 Days</string>
+    <string name="day_one">Day 1</string>
+    <string name="day_one_title">BENCH PRESSSSS</string>
+    <string name="day_one_description">If you bench a lot, you can bench more, which will allow you to bench more. Trust.</string>
+    <string name="day_two_description">Bench again. Photo unrelated.</string>
+    <string name="day_two">Day 2</string>
+    <string name="day_two_title">Bench :)</string>
+</resources>
