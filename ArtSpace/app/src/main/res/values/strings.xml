@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="imageOneTitle">Starry Night</string>
+    <string name="imageOneArtist">Vincent Van Gogh</string>
+</resources>
