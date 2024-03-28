@@ -34,7 +34,7 @@
             android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAvBc8tJaU-nTHOv_92qD3YlrM3Cv3_uPg" />
+            android:value="@string/api_key" />
         <activity android:name="com.example.android.whileinuselocation.MainActivity"
             android:exported="true">
             <intent-filter>
