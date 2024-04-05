@@ -60,10 +60,16 @@ class MyCanvasView(context: Context) : View(context) {
         return true
     }
 
+    /**
+     * Takes in an integer and makes it the paint color
+     */
     fun setPaintColor(color: Int) {
         paint.color = color
     }
 
+    /**
+     * Takes in an integer and makes it the background color
+     */
     fun setCanvasColor(color: Int) {
         backgroundColor = color
         extraCanvas.drawColor(backgroundColor)
