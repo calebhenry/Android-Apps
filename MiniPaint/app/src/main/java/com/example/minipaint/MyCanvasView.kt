@@ -16,7 +16,7 @@ private const val STROKE_WIDTH = 12f
 class MyCanvasView(context: Context) : View(context) {
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
-    private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
+    private var backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
     private val drawColor = ResourcesCompat.getColor(resources, R.color.colorPaint, null)
     private var path = Path()
     private var motionTouchEventX = 0f
@@ -58,6 +58,16 @@ class MyCanvasView(context: Context) : View(context) {
             MotionEvent.ACTION_UP -> touchUp()
         }
         return true
+    }
+
+    fun setPaintColor(color: Int) {
+        paint.color = color
+    }
+
+    fun setCanvasColor(color: Int) {
+        backgroundColor = color
+        extraCanvas.drawColor(backgroundColor)
+        invalidate()
     }
 
     private fun touchStart() {

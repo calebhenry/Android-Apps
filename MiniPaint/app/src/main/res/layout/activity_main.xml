@@ -2,17 +2,106 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/controls"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <SeekBar
+        android:id="@+id/red_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="255"
+        android:padding="16dp"
+        android:progress="0"
+        app:layout_constraintEnd_toStartOf="@+id/red_seek_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/green_seek_bar" />
+
     <TextView
+        android:id="@+id/red_seek_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:text="Red"
+        app:layout_constraintBottom_toBottomOf="@+id/red_seek_bar"
+        app:layout_constraintTop_toTopOf="@+id/red_seek_bar"
+        app:layout_constraintStart_toEndOf="@+id/red_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <SeekBar
+        android:id="@+id/green_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/red_seek_bar"
+        android:layout_marginTop="8dp"
+        android:max="255"
+        android:padding="16dp"
+        android:progress="0"
+        app:layout_constraintEnd_toStartOf="@+id/green_seek_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/blue_seek_bar" />
+
+    <TextView
+        android:id="@+id/green_seek_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Green"
+        app:layout_constraintBottom_toBottomOf="@+id/green_seek_bar"
+        app:layout_constraintTop_toTopOf="@+id/green_seek_bar"
+        app:layout_constraintStart_toEndOf="@+id/green_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <SeekBar
+        android:id="@+id/blue_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/green_seek_bar"
+        android:layout_marginTop="8dp"
+        android:max="255"
+        android:padding="16dp"
+        android:progress="0"
+        app:layout_constraintEnd_toStartOf="@+id/blue_seek_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_group" />
+
+    <TextView
+        android:id="@+id/blue_seek_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Blue"
+        app:layout_constraintBottom_toBottomOf="@+id/blue_seek_bar"
+        app:layout_constraintTop_toTopOf="@+id/blue_seek_bar"
+        app:layout_constraintStart_toEndOf="@+id/blue_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/button_group"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/button_apply_background_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="Apply Background Color"
+            app:layout_constraintBottom_toTopOf="@+id/button_apply_paint_color"/>
+
+        <Button
+            android:id="@+id/button_apply_paint_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_apply_background_color"
+            android:layout_centerHorizontal="true"
+            android:text="Apply Paint Color"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
